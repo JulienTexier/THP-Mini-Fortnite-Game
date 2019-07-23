@@ -25,8 +25,8 @@ while player.life_points > 0 && (enemies[0].life_points > 0 || enemies[1].life_p
       enemies[0].show_state
       print "1 - " 
       enemies[1].show_state
-      
-      pgm = gets.chomp
+
+      pgm = gets.chomp.downcase
       case pgm
           when "a" then player.search_weapon
           when "s" then player.search_health_pack
@@ -36,7 +36,7 @@ while player.life_points > 0 && (enemies[0].life_points > 0 || enemies[1].life_p
   enemies.each do |enemy|
     if enemy.life_points <= 0
       enemy.life_points = 0
-    elsif player.life_points > 0  #boucle if qui permet d'arrêter la boucle while si les enemies[0] et 1 sont morts avant de jouer leurs tours
+    elsif player.life_points > 0  
       if enemy.life_points > 0
         puts "Les autres joueurs t'attaquent !"
         enemy.attacks(player)

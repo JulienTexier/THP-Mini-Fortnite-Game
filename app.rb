@@ -7,7 +7,7 @@ require_relative 'lib/player'
 player1 = Player.new("Sarah")
 player2 = Player.new("Sam")
 
-while player1.life_points > 0 && player2.life_points > 0
+while player1.life_points > 0 && player2.life_points > 0 #boucle pour terminer le jeu quand l'un des joueurs a perdu toutes ses vies
   puts "\nVoici l'état de chaque joueur :"
   player1.show_state
   player2.show_state
