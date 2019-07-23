@@ -17,7 +17,15 @@ enemies = [Player.new("Josiane"), Player.new("José")] #création du tableau des
 
 while player.life_points > 0 && (enemies[0].life_points > 0 || enemies[1].life_points > 0) #Boucle pour terminer le jeu lorsque le joueur 1 ou les 2 autres ont perdu toutes leurs vies
   puts "\nVoici l'état de #{player.name} : il lui reste #{player.life_points} points de vie"
-      puts "\nQuelle action veux-tu effectuer ?", "a - chercher une meilleure arme", "s - chercher à se soigner", "\nAttaquer un joueur en vue :", "0 - #{enemies[0].show_state}", "1 - #{enemies[1].show_state}"
+      puts "\nQuelle action veux-tu effectuer ?" 
+      puts "a - chercher une meilleure arme"
+      puts "s - chercher à se soigner"
+      puts "\nAttaquer un joueur en vue :"
+      print "0 - " 
+      enemies[0].show_state
+      print "1 - " 
+      enemies[1].show_state
+      
       pgm = gets.chomp
       case pgm
           when "a" then player.search_weapon

@@ -31,8 +31,10 @@ class Game
     puts "s - chercher à se soigner" 
     puts "\nAttaquer un joueur en vue :"
     0.upto(@enemies.size - 1) do |index|
-      puts "#{index} - #{@enemies[index].show_state}\n"
+      print "#{index} - "
+      enemies[index].show_state
     end
+    puts ""
   end
       
   def menu_choice

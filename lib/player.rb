@@ -7,7 +7,7 @@ class Player
   end
 
   def show_state
-    return "#{@name} a #{@life_points} points de vie."
+    puts "#{@name} a #{@life_points} points de vie."
   end
 
   def gets_damage(damage_received)
